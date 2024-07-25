@@ -2,10 +2,14 @@
 <html xmlns:th= "http://www.thymeleaf.org" lang="en">
 <head>
 <title>Io</title>
+<link rel="stylesheet" th:href="@{/css/application.css}">
 </head>
 <body >
 	<div>
 		<h1 th:text="'Best of the year by: ' + ${user.name} + ${user.surname} + '!'" />
 	</div>
+	<object alt="cv" th:src="@{/img/cv.pdf}"/>
+	<img alt="booleanlogo" th:src="@{/img/booleanlogo.jpeg}"/>
 </body>
 </html>
+

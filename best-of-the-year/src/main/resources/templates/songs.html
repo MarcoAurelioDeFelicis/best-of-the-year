@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Best Songs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Best Songs</h1>
+        <ul>
+            <li th:each="song : ${songs}">
+                <a th:href="@{/songs/{id}(id=${song.id})}" th:text="${song.title}"></a>
+            </li>
+        </ul>
+        <a href="/homes" class="btn btn-secondary">Home</a>
+    </div>
+</body>
+
+</html>
